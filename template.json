@@ -1,0 +1,29 @@
+{
+    "variables": {
+        "aws_access_key_id": "",
+        "aws_secret_access_key": "",
+        "aws_region": "eu-central-1",
+        "aws_base_ami_id": "ami-00259791f61937520"
+    },
+    "sensitive-variables": [
+        "aws_secret_access_key"
+    ],
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "access_key": "{{user `aws_access_key_id`}}",
+            "secret_key": "{{user `aws_secret_access_key`}}",
+            "region": "{{user `aws_region`}}",
+            "ssh_username": "ubuntu",
+            "source_ami": "{{user `aws_base_ami_id`}}",
+            "instance_type": "t2.micro",
+            "ami_name": "ubuntu-xenial64-{{isotime \"20060102\"}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_nginx.sh"
+        }
+    ]
+}
