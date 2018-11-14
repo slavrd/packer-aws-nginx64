@@ -17,7 +17,7 @@
             "ssh_username": "ubuntu",
             "source_ami": "{{user `aws_base_ami_id`}}",
             "instance_type": "t2.micro",
-            "ami_name": "ubuntu-xenial64-{{isotime \"20060102\"}}"
+            "ami_name": "ubuntu-nginx64-{{isotime \"20060102\"}}"
         }
     ],
     "provisioners": [
