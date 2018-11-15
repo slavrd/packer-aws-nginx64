@@ -1,0 +1,22 @@
+---
+driver:
+  name: ec2
+  instance_type: t2.micro
+
+transport:
+  username: ubuntu
+
+provisioner:
+  name: shell
+
+platforms:
+  - name: aws/nginx64
+    driver: 
+      image_id: ami-09552f33c0ff30754
+      region: eu-central-1
+
+verifier:
+  name: inspec
+
+suites:
+  - name: default
