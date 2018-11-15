@@ -56,7 +56,7 @@ Run: `packer build template.json`
 
 ```
 
-* Running kitchen:
+* **Running kitchen:**
   * List kitchen environment - `bundle exec kitchen list`
   * Build kitchen environment - `bundle exec kitchen converge`
   * Run kitchen tests - `bundle exec kitchen verify`
