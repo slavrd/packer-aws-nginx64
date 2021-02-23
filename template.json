@@ -3,7 +3,7 @@
         "aws_access_key_id": "",
         "aws_secret_access_key": "",
         "aws_region": "eu-central-1",
-        "aws_base_ami_id": "ami-00259791f61937520"
+        "aws_base_ami_id": "ami-0932440befd74cdba"
     },
     "sensitive-variables": [
         "aws_secret_access_key"
