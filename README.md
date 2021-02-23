@@ -1,6 +1,8 @@
 # Packer AWS nginx64
 
-A packer template to build AWS ami image of ubuntu xenial with nginx.
+Packer project to build AWS ami image of ubuntu xenial with nginx.
+
+The project contains two equivalent templates using the `json` and `hcl` syntax - `template.json` and `template.pkr.hcl`.
 
 ## AWS Authentication
 
@@ -19,7 +21,7 @@ AWS credentials can be provided in the ways listed below in order of precedence:
 The base ami must be in the selected region.
 By default the template uses:
 
-* `aws_base_ami_id: ami-00259791f61937520`
+* `aws_base_ami_id: ami-0932440befd74cdba`
 * `aws_region: eu-central-1`
 
 In order to change them pass `-var 'aws_region=<aws_region>' -var 'aws_base_ami_id=<aws_ami_id>'`
